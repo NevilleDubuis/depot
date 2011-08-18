@@ -1,0 +1,2065 @@
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 07:35:25', '2011-08-16 07:35:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 07:35:25', '2011-08-16 07:35:25', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 07:35:25 UTC", "updated_at"=>"2011-08-16 07:35:25 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Aug 2011 07:35:25 UTC +00:00], ["description", "MyText"], ["image_url", "MyString"], ["price", #<BigDecimal:37f1180,'0.999E1',18(18)>], ["title", "MyString"], ["updated_at", Tue, 16 Aug 2011 07:35:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 8ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (4.9ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.8ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 1.8ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 07:35:25 UTC", "updated_at"=>"2011-08-16 07:35:25 UTC"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 4ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 07:59:35', '2011-08-16 07:59:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 07:59:35', '2011-08-16 07:59:35', 298486374)[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 07:59:35 UTC", "updated_at"=>"2011-08-16 07:59:35 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (5.0ms)
+Rendered products/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 151ms (Views: 85.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 07:59:35 UTC", "updated_at"=>"2011-08-16 07:59:35 UTC"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'MyString' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (3.7ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:05:20', '2011-08-16 08:05:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:05:20', '2011-08-16 08:05:20', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:05:20 UTC", "updated_at"=>"2011-08-16 08:05:20 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (5.2ms)
+Rendered products/new.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 153ms (Views: 112.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:05:20 UTC", "updated_at"=>"2011-08-16 08:05:20 UTC"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'MyString' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (3.6ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (12.1ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:09:45', '2011-08-16 08:09:45', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:09:45', '2011-08-16 08:09:45', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:09:45 UTC", "updated_at"=>"2011-08-16 08:09:45 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (4.9ms)
+Rendered products/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 151ms (Views: 85.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:09:46.192497' WHERE "products"."id" = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:10:41', '2011-08-16 08:10:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:10:41', '2011-08-16 08:10:41', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:10:41 UTC", "updated_at"=>"2011-08-16 08:10:41 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (4.9ms)
+Rendered products/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 152ms (Views: 85.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:10:41.443232' WHERE "products"."id" = 980190962
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:17:53', '2011-08-16 08:17:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:17:53', '2011-08-16 08:17:53', 298486374)[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:17:53 UTC", "updated_at"=>"2011-08-16 08:17:53 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (5.0ms)
+Rendered products/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 152ms (Views: 85.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:17:53.912747' WHERE "products"."id" = 980190962
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (12.1ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:18:32', '2011-08-16 08:18:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:18:32', '2011-08-16 08:18:32', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:18:38', '2011-08-16 08:18:38', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:18:38', '2011-08-16 08:18:38', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"id"=>"980190962", "title"=>"MyString", "description"=>"MyText", "image_url"=>"MyString", "price"=>"9.99", "created_at"=>"2011-08-16 08:18:38 UTC", "updated_at"=>"2011-08-16 08:18:38 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'MyString' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered products/_form.html.erb (5.1ms)
+Rendered products/new.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 152ms (Views: 112.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:18:38.801678' WHERE "products"."id" = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  [1m[36mFixture Delete (12.8ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:19:58', '2011-08-16 08:19:58', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:19:58', '2011-08-16 08:19:58', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (12.1ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:20:03', '2011-08-16 08:20:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:20:03', '2011-08-16 08:20:03', 298486374)[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:20:04 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:3ac9e48,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:20:04 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:20:04.172859' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:28:14', '2011-08-16 08:28:14', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:28:14', '2011-08-16 08:28:14', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:28:20', '2011-08-16 08:28:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:28:20', '2011-08-16 08:28:20', 298486374)[0m
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:28:20 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:3e33e30,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:28:20 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.6ms)
+Completed 200 OK in 122ms (Views: 120.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:28:20.754034' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:29:23', '2011-08-16 08:29:23', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:29:23', '2011-08-16 08:29:23', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (12.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:29:28', '2011-08-16 08:29:28', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:29:28', '2011-08-16 08:29:28', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:29:29 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:4a41650,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:29:29 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 93ms (Views: 91.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:29:29.329786' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:30:10', '2011-08-16 08:30:10', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:30:10', '2011-08-16 08:30:10', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (13.0ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:30:16', '2011-08-16 08:30:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:30:16', '2011-08-16 08:30:16', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:30:16 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:5553cc8,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:30:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 73ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (4.0ms)
+Completed 200 OK in 93ms (Views: 92.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:30:16.518247' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  [1m[36mFixture Delete (12.6ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:31:36', '2011-08-16 08:31:36', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:31:36', '2011-08-16 08:31:36', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (12.8ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:31:41', '2011-08-16 08:31:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:31:41', '2011-08-16 08:31:41', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:31:42 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:3aef260,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:31:42 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:31:42.243335' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:31', '2011-08-16 08:32:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:31', '2011-08-16 08:32:31', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:37', '2011-08-16 08:32:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:37', '2011-08-16 08:32:37', 298486374)[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:32:38 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:3f00cc8,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:32:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 76ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 93ms (Views: 91.8ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:32:38.299230' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:56', '2011-08-16 08:32:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:32:56', '2011-08-16 08:32:56', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[36mFixture Delete (12.4ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:02', '2011-08-16 08:33:02', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:02', '2011-08-16 08:33:02', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:33:02 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:3f597b0,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:33:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 82ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:33:02.628971' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:21', '2011-08-16 08:33:21', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:21', '2011-08-16 08:33:21', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:27', '2011-08-16 08:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:27', '2011-08-16 08:33:27', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:33:27 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:397c040,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:33:27 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 82ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (4.0ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:33:27.963631' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 8ms
+  [1m[36mFixture Delete (12.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:56', '2011-08-16 08:33:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:33:56', '2011-08-16 08:33:56', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:34:02', '2011-08-16 08:34:02', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 08:34:02', '2011-08-16 08:34:02', 298486374)[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 08:34:02 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:478abc8,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 08:34:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 08:34:02.732248' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 6ms
+  [1m[36mFixture Delete (12.0ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 09:41:45', '2011-08-16 09:41:45', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 09:41:45', '2011-08-16 09:41:45', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 09:41:51', '2011-08-16 09:41:51', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 09:41:51', '2011-08-16 09:41:51', 298486374)[0m
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Aug 2011 09:41:51 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:4e06d08,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 09:41:51 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 73ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.8ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 09:41:51.718126' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 36ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (12.0ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 10:10:33', '2011-08-16 10:10:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 10:10:33', '2011-08-16 10:10:33', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 10:10:33', '2011-08-16 10:10:33', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 10:10:33', '2011-08-16 10:10:33', 298486374)
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 10:10:38', '2011-08-16 10:10:38', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 10:10:38', '2011-08-16 10:10:38', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 10:10:38', '2011-08-16 10:10:38', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 10:10:38', '2011-08-16 10:10:38', 298486374)
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts" 
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 10:10:38 UTC", "updated_at"=>"2011-08-16 10:10:38 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Tue, 16 Aug 2011 10:10:38 UTC +00:00], ["updated_at", Tue, 16 Aug 2011 10:10:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 7ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "carts" 
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "carts" 
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.3ms)
+Completed 200 OK in 91ms (Views: 90.5ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 10:10:38 UTC", "updated_at"=>"2011-08-16 10:10:38 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 3ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Aug 2011 10:10:39 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:376b3c8,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 10:10:39 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 75ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Rendered products/_form.html.erb (4.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 10:10:39.163667' WHERE "products"."id" = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:34:16', '2011-08-16 11:34:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:34:16', '2011-08-16 11:34:16', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:34:16', '2011-08-16 11:34:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:34:16', '2011-08-16 11:34:16', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:34:16', '2011-08-16 11:34:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:34:16', '2011-08-16 11:34:16', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (3.0ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:34:22', '2011-08-16 11:34:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:34:22', '2011-08-16 11:34:22', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:34:22', '2011-08-16 11:34:22', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:34:22', '2011-08-16 11:34:22', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:34:22', '2011-08-16 11:34:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:34:22', '2011-08-16 11:34:22', 298486374)[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 11:34:22 UTC", "updated_at"=>"2011-08-16 11:34:22 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Tue, 16 Aug 2011 11:34:22 UTC +00:00], ["updated_at", Tue, 16 Aug 2011 11:34:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 7ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts
+Completed 302 Found in 150ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.4ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 11:34:22 UTC", "updated_at"=>"2011-08-16 11:34:22 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 4ms
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "line_items" [0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered line_items/_form.html.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#new as HTML
+Rendered line_items/_form.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"id"=>"980190962", "product_id"=>"1", "cart_id"=>"1", "created_at"=>"2011-08-16 11:34:22 UTC", "updated_at"=>"2011-08-16 11:34:22 UTC"}, "id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items/980190962
+Completed 302 Found in 4ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Aug 2011 11:34:22 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:42662c8,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 11:34:22 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 73ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."product_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 7ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.7ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 11:34:22.867511' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:35:29', '2011-08-16 11:35:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 11:35:29', '2011-08-16 11:35:29', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:35:29', '2011-08-16 11:35:29', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 11:35:29', '2011-08-16 11:35:29', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:35:29', '2011-08-16 11:35:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 11:35:29', '2011-08-16 11:35:29', 298486374)[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 11:35:29 UTC", "updated_at"=>"2011-08-16 11:35:29 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Tue, 16 Aug 2011 11:35:29 UTC +00:00], ["updated_at", Tue, 16 Aug 2011 11:35:29 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 8ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts
+Completed 302 Found in 93ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.3ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 11:35:29 UTC", "updated_at"=>"2011-08-16 11:35:29 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 4ms
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items
+Completed 302 Found in 3ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "line_items" [0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered line_items/_form.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#new as HTML
+Rendered line_items/_form.html.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"id"=>"980190962", "product_id"=>"1", "cart_id"=>"1", "created_at"=>"2011-08-16 11:35:29 UTC", "updated_at"=>"2011-08-16 11:35:29 UTC"}, "id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items/980190962
+Completed 302 Found in 4ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Aug 2011 11:35:30 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:4c338a0,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 11:35:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 75ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."product_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 10ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 11:35:30.362926' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.3ms)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 12:58:37', '2011-08-16 12:58:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 12:58:37', '2011-08-16 12:58:37', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 12:58:37', '2011-08-16 12:58:37', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 12:58:37', '2011-08-16 12:58:37', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 12:58:37', '2011-08-16 12:58:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 12:58:37', '2011-08-16 12:58:37', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 12:58:43', '2011-08-16 12:58:43', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-16 12:58:43', '2011-08-16 12:58:43', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 12:58:43', '2011-08-16 12:58:43', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-16 12:58:43', '2011-08-16 12:58:43', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 12:58:43', '2011-08-16 12:58:43', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-16 12:58:43', '2011-08-16 12:58:43', 298486374)[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 12:58:43 UTC", "updated_at"=>"2011-08-16 12:58:43 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Tue, 16 Aug 2011 12:58:43 UTC +00:00], ["updated_at", Tue, 16 Aug 2011 12:58:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 8ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts
+Completed 302 Found in 124ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.5ms)
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-16 12:58:43 UTC", "updated_at"=>"2011-08-16 12:58:43 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 4ms
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items
+Completed 302 Found in 4ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "line_items" [0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered line_items/_form.html.erb (3.5ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#new as HTML
+Rendered line_items/_form.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"id"=>"980190962", "product_id"=>"1", "cart_id"=>"1", "created_at"=>"2011-08-16 12:58:43 UTC", "updated_at"=>"2011-08-16 12:58:43 UTC"}, "id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items/980190962
+Completed 302 Found in 5ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Aug 2011 12:58:44 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:54b2df0,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Tue, 16 Aug 2011 12:58:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 77ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."product_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 7ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.9ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-16 12:58:44.179462' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:33:25', '2011-08-17 06:33:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:33:25', '2011-08-17 06:33:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:33:25', '2011-08-17 06:33:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:33:25', '2011-08-17 06:33:25', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:33:25', '2011-08-17 06:33:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:33:25', '2011-08-17 06:33:25', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:33:31', '2011-08-17 06:33:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:33:31', '2011-08-17 06:33:31', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:33:31', '2011-08-17 06:33:31', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:33:31', '2011-08-17 06:33:31', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:33:31', '2011-08-17 06:33:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:33:31', '2011-08-17 06:33:31', 298486374)[0m
+  [1m[35mCart Load (0.4ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-17 06:33:31 UTC", "updated_at"=>"2011-08-17 06:33:31 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 7ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190963
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190963]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 119ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.3ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.6ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" 
+Completed 500 Internal Server Error in 27ms
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.4ms)
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (0.9ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (31.7ms)
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-17 06:33:31 UTC", "updated_at"=>"2011-08-17 06:33:31 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 4ms
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to 
+Completed 500 Internal Server Error in 17ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered line_items/_form.html.erb (3.2ms)
+Completed 500 Internal Server Error in 11ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+Completed 500 Internal Server Error in 7ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#new as HTML
+Rendered line_items/_form.html.erb (1.9ms)
+Completed 500 Internal Server Error in 6ms
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"id"=>"980190962", "product_id"=>"1", "cart_id"=>"1", "created_at"=>"2011-08-17 06:33:31 UTC", "updated_at"=>"2011-08-17 06:33:31 UTC", "quantity"=>"1"}, "id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items/980190962
+Completed 302 Found in 4ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:39e0888,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 75ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."product_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 7ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (5.3ms)
+Completed 500 Internal Server Error in 14ms
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 500 Internal Server Error in 7ms
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.4ms)
+Completed 500 Internal Server Error in 6ms
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-17 06:33:31.981611' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 7ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:33:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190963[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 1.1ms)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:37:39', '2011-08-17 06:37:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:37:39', '2011-08-17 06:37:39', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:37:39', '2011-08-17 06:37:39', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:37:39', '2011-08-17 06:37:39', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:37:39', '2011-08-17 06:37:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:37:39', '2011-08-17 06:37:39', 298486374)[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'my book' LIMIT 1
+  [1m[36mFixture Delete (12.1ms)[0m  [1mDELETE FROM "line_items"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:37:45', '2011-08-17 06:37:45', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at", "id") VALUES (1, 1, '2011-08-17 06:37:45', '2011-08-17 06:37:45', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:37:45', '2011-08-17 06:37:45', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2011-08-17 06:37:45', '2011-08-17 06:37:45', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:37:45', '2011-08-17 06:37:45', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, '2011-08-17 06:37:45', '2011-08-17 06:37:45', 298486374)[0m
+  [1m[35mCart Load (0.5ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#create as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-17 06:37:45 UTC", "updated_at"=>"2011-08-17 06:37:45 UTC"}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190963
+Completed 302 Found in 8ms
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190963
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 980190963]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 125ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered carts/_form.html.erb (2.3ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.7ms)
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" 
+Completed 500 Internal Server Error in 57ms
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#new as HTML
+Rendered carts/_form.html.erb (1.4ms)
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190962
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.2ms)
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (1.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by CartsController#update as HTML
+  Parameters: {"cart"=>{"id"=>"980190962", "created_at"=>"2011-08-17 06:37:45 UTC", "updated_at"=>"2011-08-17 06:37:45 UTC"}, "id"=>"980190962"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/carts/980190962
+Completed 302 Found in 4ms
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" 
+  Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to 
+Completed 500 Internal Server Error in 17ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Rendered line_items/_form.html.erb (3.4ms)
+Completed 500 Internal Server Error in 11ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+Completed 500 Internal Server Error in 7ms
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", 980190962]]
+  Processing by LineItemsController#new as HTML
+Rendered line_items/_form.html.erb (1.9ms)
+Completed 500 Internal Server Error in 5ms
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 4ms
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"id"=>"980190962", "product_id"=>"1", "cart_id"=>"1", "created_at"=>"2011-08-17 06:37:45 UTC", "updated_at"=>"2011-08-17 06:37:45 UTC", "quantity"=>"1"}, "id"=>"980190962"}
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/line_items/980190962
+Completed 302 Found in 4ms
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" 
+  Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE "products"."title" = 'lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00], ["description", "wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", #<BigDecimal:4436080,'0.1995E2',18(18)>], ["title", "lorem Ipsum"], ["updated_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 72ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."product_id" = 980190962
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 6ms
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" [0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+Rendered products/_form.html.erb (3.7ms)
+Completed 500 Internal Server Error in 12ms
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+Completed 500 Internal Server Error in 7ms
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (2.5ms)
+Completed 500 Internal Server Error in 6ms
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 500 Internal Server Error in 42ms
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"lorem Ipsum", "description"=>"wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "products" WHERE ("products"."title" = 'lorem Ipsum' AND "products"."id" != 980190962) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "products" SET "title" = 'lorem Ipsum', "description" = 'wibbles are fun!', "image_url" = 'lorem.jpg', "price" = 19.95, "updated_at" = '2011-08-17 06:37:45.819404' WHERE "products"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 8ms
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00], ["updated_at", Wed, 17 Aug 2011 06:37:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 980190963[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.7ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 1.1ms)

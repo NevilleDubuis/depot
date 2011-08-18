@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depot</title>
+    <%= stylesheet_link_tag "depot" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="store">
+    <div id="banner">
+      <%= image_tag("/images/logo.png") %>
+      <%= @page_title || "prag book" %>
+
+    </div>
+    <div id="columns">
+      <div id="side">
+        <div id="cart"
+             <% if @cart.total_items == 0 %>   
+               style="display: none"
+             <% end %>
+             >
+
+          <%= render(@cart) %>
+        </div id="bottom">
+        <a href="/">home</a>
+
+      </div>
+
+      <div id="main">
+        <%= yield %>
+      </div>
+
+    </div>
+  </body>
+</html>
