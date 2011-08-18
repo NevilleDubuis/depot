@@ -46914,3 +46914,1020 @@ Served asset /depot.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 10:27:16 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (119.6ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (88.6ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (119.1ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (97.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (121.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (87.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (85.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (87.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (123.3ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (82.2ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (109.6ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (95.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (138.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (109.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (94.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (99.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (99.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (99.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (143.0ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (86.2ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (109.8ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (85.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (116.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (148.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (262.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (99.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/line_items" for 127.0.0.1 at 2011-08-18 11:25:49 +0200
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Rendered line_items/index.html.erb within layouts/application (75.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.6ms)
+Completed 200 OK in 110ms (Views: 92.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:25:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:25:49 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/line_items/49/edit" for 127.0.0.1 at 2011-08-18 11:25:52 +0200
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1  [["id", "49"]]
+Rendered line_items/_form.html.erb (10.9ms)
+Rendered line_items/edit.html.erb within layouts/application (14.5ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (4.2ms)
+Completed 200 OK in 130ms (Views: 59.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:25:52 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:25:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/line_items/49" for 127.0.0.1 at 2011-08-18 11:25:56 +0200
+  Processing by LineItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "line_item"=>{"product_id"=>"4", "cart_id"=>"9"}, "commit"=>"Update Line item", "id"=>"49"}
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35mCart Load (13.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 11:25:56 +0200
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Rendered store/index.html.erb within layouts/application (106.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (3.3ms)
+Completed 200 OK in 373ms (Views: 306.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:25:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:25:57 +0200
+Served asset /depot.css - 304 Not Modified (4ms)
+
+
+Started POST "/line_items?product_id=4" for 127.0.0.1 at 2011-08-18 11:26:07 +0200
+  Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "product_id"=>"4"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY title LIMIT 1  [["id", "4"]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88 AND "line_items"."product_id" = 4 LIMIT 1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "order_id", "product_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["cart_id", 88], ["created_at", Thu, 18 Aug 2011 09:26:07 UTC +00:00], ["order_id", nil], ["product_id", 4], ["quantity", 1], ["updated_at", Thu, 18 Aug 2011 09:26:07 UTC +00:00]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1
+Rendered line_items/_line_item.html.erb (49.8ms)
+Rendered carts/_cart.html.erb (53.8ms)
+Rendered line_items/create.js.erb (55.3ms)
+Completed 200 OK in 317ms (Views: 91.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:26:07 +0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:26:07 +0200
+Served asset /add.png - 304 Not Modified (1ms)
+Served asset /remove.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:26:07 +0200
+Served asset /del.png - 304 Not Modified (1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (124.3ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (103.2ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (112.3ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (90.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (118.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (90.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (77.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/orders" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+  Processing by OrdersController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders" ORDER BY created_at desc LIMIT 10 OFFSET 0
+Rendered orders/index.html.erb within layouts/application (18.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered line_items/_line_item.html.erb (78.4ms)
+Rendered carts/_cart.html.erb (121.2ms)
+Completed 200 OK in 250ms (Views: 229.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+Served asset /add.png - 304 Not Modified (0ms)
+Served asset /remove.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:29:53 +0200
+Served asset /del.png - 304 Not Modified (0ms)
+
+
+Started GET "/orders/5/edit" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+  Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+Rendered orders/_form.html.erb (44.7ms)
+Rendered orders/edit.html.erb within layouts/application (46.8ms)
+  [1m[35m (0.2ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1
+Rendered line_items/_line_item.html.erb (78.4ms)
+Rendered carts/_cart.html.erb (81.8ms)
+Completed 200 OK in 170ms (Views: 153.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+Served asset /remove.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+Served asset /add.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:29:55 +0200
+Served asset /del.png - 304 Not Modified (2ms)
+
+
+Started PUT "/orders/5" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+  Processing by OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "order"=>{"name"=>"werwer", "addresse"=>"sdfsdfsdfsdfsdfsdfsdfsdf", "email"=>"ndubuis@gmail.com", "pay_type"=>"Credit card"}, "commit"=>"Place order", "id"=>"5"}
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Redirected to http://localhost:3000/orders/5
+Completed 302 Found in 58ms
+
+
+Started GET "/orders/5" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+  Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Rendered orders/show.html.erb within layouts/application (39.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered line_items/_line_item.html.erb (71.9ms)
+Rendered carts/_cart.html.erb (81.0ms)
+Completed 200 OK in 166ms (Views: 149.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+Served asset /remove.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:29:58 +0200
+Served asset /add.png - 304 Not Modified (0ms)
+Served asset /del.png - 304 Not Modified (5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (135.9ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (83.6ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (114.7ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (82.1ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (105.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (81.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (97.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (99.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/line_items" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+  Processing by LineItemsController#index as HTML
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" [0m
+  [1m[35mCart Load (50.4ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Rendered line_items/index.html.erb within layouts/application (82.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered line_items/_line_item.html.erb (74.0ms)
+Rendered carts/_cart.html.erb (77.6ms)
+Completed 200 OK in 398ms (Views: 326.1ms | ActiveRecord: 52.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+Served asset /depot.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+Served asset /remove.png - 304 Not Modified (0ms)
+Served asset /del.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:34:41 +0200
+Served asset /add.png - 304 Not Modified (1ms)
+
+
+Started GET "/line_items/49/edit" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+  Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "49"]]
+Rendered line_items/_form.html.erb (9.4ms)
+Rendered line_items/edit.html.erb within layouts/application (11.3ms)
+  [1m[35m (0.2ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1
+Rendered line_items/_line_item.html.erb (67.0ms)
+Rendered carts/_cart.html.erb (69.8ms)
+Completed 200 OK in 141ms (Views: 93.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+Served asset /add.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:34:43 +0200
+Served asset /del.png - 304 Not Modified (0ms)
+Served asset /remove.png - 304 Not Modified (1ms)
+
+
+Started PUT "/line_items/49" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+  Processing by LineItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "line_item"=>{"product_id"=>"4", "cart_id"=>"9"}, "commit"=>"Update Line item", "id"=>"49"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 88]]
+Rendered store/index.html.erb within layouts/application (97.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered line_items/_line_item.html.erb (7.9ms)
+Rendered carts/_cart.html.erb (46.4ms)
+Completed 200 OK in 240ms (Views: 169.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+Served asset /add.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+Served asset /remove.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:34:46 +0200
+Served asset /del.png - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (136.2ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (74.1ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (121.7ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (75.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (113.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (85.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (87.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (142.7ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (103.6ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (117.8ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (86.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (122.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (87.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (85.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (125.1ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (92.3ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (112.9ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (117.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (92.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (84.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (99.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (183.9ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (87.7ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (116.4ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (100.8ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (122.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (86.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (87.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (141.2ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (77.1ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (120.1ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (76.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (112.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (75.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (85.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (122.8ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (81.8ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (114.4ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (93.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (117.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (80.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (85.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (99.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (122.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (99.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (128.2ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (76.8ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (119.8ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (77.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (123.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (76.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (87.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:53:37 +0200
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" 
+Rendered carts/index.html.erb within layouts/application (60.6ms)
+Completed 500 Internal Server Error in 93ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>   
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39951880'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:55:15 +0200
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Rendered carts/index.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39379520'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:55:16 +0200
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" 
+Rendered carts/index.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39379520'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:55:17 +0200
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Rendered carts/index.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39379520'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:55:17 +0200
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" 
+Rendered carts/index.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39379520'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:55:17 +0200
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Rendered carts/index.html.erb within layouts/application (25.1ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined method `total_items' for nil:NilClass):
+    15:     <div id="columns">
+    16:       <div id="side">
+    17:         <div id="cart"
+    18:              <% if @cart.total_items == 0 %>
+    19:                style="display: none"
+    20:              <% end %>
+    21:              >
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__727200732564704299_39379520'
+  app/controllers/carts_controller.rb:7:in `index'
+
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /home/ndubuis/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+  Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" 
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+Rendered carts/index.html.erb within layouts/application (22.4ms)
+  [1m[35m (0.3ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 ORDER BY title LIMIT 1
+Rendered line_items/_line_item.html.erb (73.3ms)
+Rendered carts/_cart.html.erb (83.5ms)
+Completed 200 OK in 175ms (Views: 171.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+Served asset /add.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+Served asset /remove.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2011-08-18 11:56:06 +0200
+Served asset /del.png - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (126.0ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.6ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (403.3ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (100.6ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (119.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (88.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (97.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (77.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started DELETE "/carts/7" for 127.0.0.1 at 2011-08-18 11:56:58 +0200
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 88]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 88
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = ?[0m  [["id", 279]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 88]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 192ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 11:56:59 +0200
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 18 Aug 2011 09:56:59 UTC +00:00], ["updated_at", Thu, 18 Aug 2011 09:56:59 UTC +00:00]]
+Rendered store/index.html.erb within layouts/application (12.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 89[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 89
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.9ms)
+Completed 200 OK in 275ms (Views: 44.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:56:59 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:56:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (131.6ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (92.1ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (116.5ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (100.1ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (119.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (88.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (99.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (99.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/carts" for 127.0.0.1 at 2011-08-18 11:58:30 +0200
+  Processing by CartsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+  [1m[35mCart Load (15.6ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 89]]
+Rendered carts/index.html.erb within layouts/application (66.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 89[0m
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 89
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (30.7ms)
+Completed 200 OK in 299ms (Views: 276.6ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:58:31 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:58:31 +0200
+Served asset /depot.css - 304 Not Modified (3ms)
+
+
+Started DELETE "/carts/7" for 127.0.0.1 at 2011-08-18 11:58:34 +0200
+  Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lyHgqTSpu91TBjnLmOPbpD8qyMey2bgqZXiFJg2RPbA=", "id"=>"7"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 89]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 89
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 89]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 182ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 11:58:35 +0200
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 18 Aug 2011 09:58:35 UTC +00:00], ["updated_at", Thu, 18 Aug 2011 09:58:35 UTC +00:00]]
+Rendered store/index.html.erb within layouts/application (97.2ms)
+  [1m[35m (0.3ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 90
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 90[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.4ms)
+Completed 200 OK in 293ms (Views: 129.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 11:58:35 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 11:58:35 +0200
+Served asset /application.js - 304 Not Modified (10ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (132.2ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (94.5ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (130.9ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (107.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (113.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (95.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (128.4ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.4ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (105.1ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.8ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (107.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (100.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (84.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (138.6ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (89.3ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (117.7ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (99.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (109.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (88.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (87.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (133.9ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (97.4ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (109.1ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (107.1ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (115.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (93.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (86.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (132.9ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (92.9ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (110.2ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (86.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (111.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (86.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (96.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (133.4ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.4ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (113.3ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (101.5ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (108.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (89.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (85.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+
+
+Started GET "/orders" for 127.0.0.1 at 2011-08-18 12:13:24 +0200
+  Processing by OrdersController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 90]]
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY created_at desc LIMIT 10 OFFSET 0[0m
+Rendered orders/index.html.erb within layouts/application (54.8ms)
+  [1m[35m (0.2ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 90
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 90[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (3.4ms)
+Completed 200 OK in 105ms (Views: 88.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 12:13:25 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 12:13:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-08-18 12:13:27 +0200
+  Processing by OrdersController#new as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 90]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 90[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 12:13:27 +0200
+  Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" ORDER BY title
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 90]]
+Rendered store/index.html.erb within layouts/application (9.6ms)
+  [1m[35m (0.2ms)[0m  SELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 90
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 90[0m
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (2.8ms)
+Completed 200 OK in 141ms (Views: 73.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 12:13:28 +0200
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 12:13:28 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-18 12:13:34 +0200
+  Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY title[0m
+  [1m[35mCart Load (13.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 90]]
+Rendered store/index.html.erb within layouts/application (106.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_id FROM "line_items" WHERE "line_items"."cart_id" = 90[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = 90
+Rendered collection (0.0ms)
+Rendered carts/_cart.html.erb (3.2ms)
+Completed 200 OK in 386ms (Views: 307.9ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-08-18 12:13:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2011-08-18 12:13:34 +0200
+Served asset /depot.css - 304 Not Modified (3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (136.5ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (90.3ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (117.2ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (88.6ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (121.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (109.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (88.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (132.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (140.3ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (81.5ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (107.8ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (97.6ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (124.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (94.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (88.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (84.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (137.8ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (96.2ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (114.6ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (92.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (118.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (90.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (99.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (99.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (135.8ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (101.8ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime, "quantity" integer DEFAULT 1, "order_id" integer) 
+  [1m[36m (113.8ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "addresse" text, "email" varchar(255), "pay_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (101.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (118.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (111.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (86.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110817140115')[0m
+  [1m[35m (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816132449')
+  [1m[36m (99.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816072227')[0m
+  [1m[35m (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110816101457')
+  [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110816100559')[0m
+  [1m[35m (99.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110817140023')
