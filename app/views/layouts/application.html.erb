@@ -14,15 +14,31 @@
     </div>
     <div id="columns">
       <div id="side">
-        <div id="cart"
-             <% if @cart.total_items == 0 %>
-               style="display: none"
-             <% end %>
-             >
+        <% if @cart %>
+          <div id="cart"
 
-          <%= render(@cart) %>
-        </div id="bottom">
-        <a href="/">home</a>
+                 <% if @cart.total_items == 0 %>
+                   style="display: none"
+                 <% end %>
+
+               >
+
+            <%= render(@cart) %>
+          </div>
+        <% end %>
+        <a href="/">Home</a><br/>
+        <a href="/faq">Questions</a><br/>
+        <a href="/news">News</a><br/>
+        <a href="/contact">Contact</a><br/>
+
+        <% if session[:user_id] %>
+          <br/>
+            <%= link_to 'Orders', orders_path %><br/>
+            <%= link_to 'Products', products_path %><br/>
+            <%= link_to 'Users', users_path %><br/>
+          <br/>
+          <%= button_to 'Logout', logout_path, :method => :delete %>
+        <% end %>
 
       </div>
 
